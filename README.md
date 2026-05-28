@@ -3,7 +3,7 @@
 A chaotic “Would You Rather” game built with AI-assisted vibe coding.
 
 ## Live Website
-https://your-vercel-url.vercel.app
+https://studio-tau-six-35.vercel.app/
 
 ## Features
 - Chaos meter
