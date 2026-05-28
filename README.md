@@ -1,5 +1,19 @@
-# Firebase Studio
+# Chaos Bound
 
-This is a NextJS starter in Firebase Studio.
+A chaotic “Would You Rather” game built with AI-assisted vibe coding.
 
-To get started, take a look at src/app/page.tsx.
+## Live Website
+https://your-vercel-url.vercel.app
+
+## Features
+- Chaos meter
+- Meme-style reactions
+- Ridiculous scenarios
+- Interactive animations
+- Personality results
+
+## Tech Stack
+- Next.js
+- TypeScript
+- Firebase Studio
+- Vercel
