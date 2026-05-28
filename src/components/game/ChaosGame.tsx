@@ -53,8 +53,7 @@ export default function ChaosGame() {
       const res = await generateReaction({ chosenOption: chosenText, otherOption: otherText });
       setReaction(res.reactionMessage);
     } catch (e) {
-      console.error("AI Error:", e);
-      setReaction("The AI is too stunned by your choice to speak.");
+      // If AI fails, we just don't show a reaction
     } finally {
       setIsLoading(false);
     }
@@ -200,11 +199,13 @@ export default function ChaosGame() {
       <div className="min-h-[120px] flex flex-col items-center justify-center space-y-6 pt-8">
         {selectedOption && (
           <div className="w-full max-w-xl text-center space-y-6 animate-in fade-in slide-in-from-top-4 duration-500">
-            {reaction ? (
+            {reaction && (
               <p className="text-lg md:text-xl font-medium text-muted-foreground leading-relaxed italic">
                 &quot;{reaction}&quot;
               </p>
-            ) : (
+            )}
+            
+            {!reaction && isLoading && (
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Loader2 className="animate-spin h-5 w-5" />
                 <span className="font-headline text-sm uppercase tracking-widest">Generating Snark...</span>
